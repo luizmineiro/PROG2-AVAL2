@@ -4,9 +4,9 @@
 This code implements classes that manipulate JSON, XML, CSV and TSV files following the object-oriented paradigms.
 
 #### Authors
-José Fhilipe Martins Coelho,
-João Luiz Mineiro Alves,
-Fernando Soares de Araujo Filho
+José Fhilipe Martins Coelho <br>
+João Luiz Mineiro Alves <br>
+Fernando Soares de Araujo Filho <br>
 
 #### ```lib/``` folder
 
