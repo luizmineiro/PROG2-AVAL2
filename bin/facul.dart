@@ -1,10 +1,11 @@
-import '../lib/json_data.dart';
+import 'package:facul/json_data.dart';
 
 void main(List<String> arguments) {
-  print('Main');
   var newFile = JsonData();
-  newFile.load('sample.json');
-  print(newFile.idata());
 
-  //print('New file: ${newFile.data}');
+  newFile.load('test.json');
+  print(newFile.data);
+
+  newFile.data = '{\n  "name": "ak47",\n  "price": 300\n}';
+  print(newFile.data);
 }
