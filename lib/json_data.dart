@@ -1,9 +1,11 @@
+import 'dart:io';
 import 'Data.dart';
 
 class JsonData extends Data {
+File ifile = File('sample.json');
 @override
   void load(String fileName) {
-    // TODO: implement load
+    ifile = File(fileName);
   }
   void save(String fileName) {
     // TODO: implement save
@@ -16,8 +18,8 @@ class JsonData extends Data {
     throw UnimplementedError();
   }
   String idata() {
-    // TODO: implement data
-    throw UnimplementedError();
+    String contents = ifile.readAsStringSync();
+    return contents;
   }
   List<String> fields() {
     // TODO: implement fields
