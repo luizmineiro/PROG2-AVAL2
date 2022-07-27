@@ -1,9 +1,7 @@
-import 'package:facul/data.dart';
+import 'Data.dart';
 
 abstract class DelimitedData extends Data {
-  DelimitedData(String fileName) : super() {
-    load(fileName);
-  }
+
 
   String separator(); 
 }
