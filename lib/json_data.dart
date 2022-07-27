@@ -2,10 +2,6 @@ import 'Data.dart';
 
 class JsonData extends Data {
 @override
-String separator() {
-    // TODO: implement separator
-    throw UnimplementedError();
-  }
   void load(String fileName) {
     // TODO: implement load
   }
