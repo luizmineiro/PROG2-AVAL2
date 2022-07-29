@@ -3,9 +3,12 @@ import 'package:facul/json_data.dart';
 void main(List<String> arguments) {
   var newFile = JsonData();
 
-  newFile.load('test.json');
-  print(newFile.data);
+  newFile.load('test.csv');
+  
+  // newFile.data.split('\n').forEach((line) {
+  //   print(line);
+  // });
 
-  newFile.data = '{\n  "name": "ak47",\n  "price": 300\n}';
-  print(newFile.data);
+  newFile.data = 'Fhilipe	20	phb	pi';
+  // print(newFile.data);
 }

@@ -14,9 +14,16 @@ abstract class Data {
 
   String get data => _file.readAsStringSync();
 
-  set data(String value) {
-    var bufferFile = _file.openSync();
+  set data(String file) {
+    String fileString = "";
+    // _file.openSync(mode: FileMode.append).writeStringSync(file, encoding: utf8);
+    var bufferFile = _file.readAsStringSync().split('\n');
+    bufferFile.add(file);
+    for (var element in bufferFile) {
+      fileString += '$element\n';
+    }
+    _file.writeAsStringSync(fileString);
   }
 
-  List<String> fields() => data.split("\n");
+  List<String> fields() => data[0].split("\t");
 }
