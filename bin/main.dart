@@ -10,17 +10,29 @@ void main(List<String> arguments) {
   JsonData jsonFile = JsonData();
   XmlData xmlFile = XmlData();
 
-  csvFile.load('test.csv');
-  print(csvFile.fields());
+  try {
+    csvFile.load('data.csv');
+  } catch (e) {
+    print(e);
+  }
 
-  tsvFile.load('test.tsv');
-  print(tsvFile.fields());
+  try {
+    tsvFile.load('data.tsv');
+  } catch (e) {
+    print(e);
+  }
 
-  jsonFile.load('test.json');
-  print(jsonFile.fields());
+  try {
+    jsonFile.load('data.json');
+  } catch (e) {
+    print(e);
+  }
 
-  xmlFile.load('test.xml');
-  print(xmlFile.fields());
+  try {
+    xmlFile.load('data.xml');
+  } catch (e) {
+    print(e);
+  }
 
   // print('José Fhilipe Martins Coelho\nJoão Luiz Mineiro Alves\nFernando Soares de Araujo Filho');
 }
