@@ -1,7 +1,7 @@
-import 'package:facul/tsv_data.dart';
-import 'package:facul/csv_data.dart';
-import 'package:facul/json_data.dart';
-import 'package:facul/xml_data.dart';
+import 'package:main/tsv_data.dart';
+import 'package:main/csv_data.dart';
+import 'package:main/json_data.dart';
+import 'package:main/xml_data.dart';
 
 void main(List<String> arguments) {
   // TODO modificar o load para ele não ler um arquivo que não for do tipo dele

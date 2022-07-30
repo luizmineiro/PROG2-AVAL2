@@ -1,21 +1,18 @@
-import 'dart:io';
-import 'package:facul/data.dart';
+import 'package:main/data.dart';
 
 abstract class DelimitedData extends Data {
   String separator();
-
-  late File _file;
 
   @override
   set data(String file) {
     String fileString = "";
     // _file.openSync(mode: FileMode.append).writeStringSync(file, encoding: utf8);
-    var bufferFile = _file.readAsStringSync().split('\n');
+    var bufferFile = super.file.readAsStringSync().split('\n');
     bufferFile.add(file);
     for (var element in bufferFile) {
       fileString += '$element\n';
     }
-    _file.writeAsStringSync(fileString);
+    super.file.writeAsStringSync(fileString);
   }
 
   @override

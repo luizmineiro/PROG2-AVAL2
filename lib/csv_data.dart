@@ -1,4 +1,4 @@
-import 'package:facul/delimited_data.dart';
+import 'package:main/delimited_data.dart';
 
 class CsvData extends DelimitedData {
   @override String separator() => ',';
