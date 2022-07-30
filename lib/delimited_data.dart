@@ -17,4 +17,10 @@ abstract class DelimitedData extends Data {
     }
     _file.writeAsStringSync(fileString);
   }
+
+  @override
+  List<String> fields() {
+    var listFile = data.split("\n");
+    return listFile[0].split(separator());
+  }
 }

@@ -1,32 +1,6 @@
-[
-  {
-    "name": "fhilipe",
-    "age": 21,
-    "city": "são paulo",
-    "state": "SP"
-  },
-  {
-    "name": "joão",
-    "age": 21,
-    "city": "são paulo",
-    "state": "SP"
-  },
-  {
-    "name": "fhilipe",
-    "age": 21,
-    "city": "são paulo",
-    "state": "SP"
-  },
-  {
-    "name": "fhilipe",
-    "age": 21,
-    "city": "são paulo",
-    "state": "SP"
-  },
-  {
-    "name": "fhilipe",
-    "age": 21,
-    "city": "são paulo",
-    "state": "SP"
-  }
-]
+{
+  "name": "fhilipe",
+  "age": 21,
+  "city": "são paulo",
+  "state": "SP"
+}
