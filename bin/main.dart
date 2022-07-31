@@ -50,5 +50,5 @@ void main(List<String> arguments) {
   print(csvFile.fields());
   print(tsvFile.fields());
 
-  // print('José Fhilipe Martins Coelho\nJoão Luiz Mineiro Alves\nFernando Soares de Araujo Filho');
+  print('José Fhilipe Martins Coelho\nJoão Luiz Mineiro Alves\nFernando Soares de Araujo Filho');
 }
