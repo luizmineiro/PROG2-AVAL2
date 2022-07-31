@@ -13,6 +13,7 @@ class XmlData extends Data {
   @override
   set data(String input) {
     XmlDocument xmlFile = XmlDocument.parse(super.bufferFile);
+    XmlName rootNodeName = xmlFile.rootElement.name;
     List xmlList = [];
     
     for (var element in xmlFile.rootElement.childElements.toList()) {
@@ -26,7 +27,7 @@ class XmlData extends Data {
       xmlOut += "$element\n";
     }
 
-    super.bufferFile = xmlOut;
+    super.bufferFile = "<$rootNodeName>\n$xmlOut</$rootNodeName>";
   }
 
   @override

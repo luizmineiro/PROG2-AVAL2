@@ -12,13 +12,15 @@ class JsonData extends Data {
 
   @override
   set data(String input) {
+    JsonEncoder encoder = JsonEncoder.withIndent('  ');
     List jsonFile = json.decode(super.bufferFile);
     jsonFile.add(json.decode(input));
-    super.bufferFile = json.encode(jsonFile);
+    super.bufferFile = encoder.convert(jsonFile);
   }
 
   @override
   List<String> fields() {
+
     List jsonFile = json.decode(super.file.readAsStringSync());
     List<String> jsonMap = [];
 
