@@ -1,12 +1,9 @@
-import 'dart:convert';
-
 import 'package:main/tsv_data.dart';
 import 'package:main/csv_data.dart';
 import 'package:main/json_data.dart';
 import 'package:main/xml_data.dart';
 
 void main(List<String> arguments) {
-  // TODO modificar o load para ele não ler um arquivo que não for do tipo dele
   CsvData csvFile = CsvData();
   TsvData tsvFile = TsvData();
   JsonData jsonFile = JsonData();
@@ -37,18 +34,18 @@ void main(List<String> arguments) {
   }
 
   jsonFile.data = '{\n  "name": "John",\n  "age": 30,\n  "city": "New York"\n}';
-  print(jsonFile.data);
+  // print(jsonFile.data);
   xmlFile.data = '<person>\n  <name>John</name>\n  <age>30</age>\n  <city>New York</city>\n</person>';
-  print(xmlFile.data);
+  // print(xmlFile.data);
   csvFile.data = 'John,30,New York';
-  print(csvFile.data);
+  // print(csvFile.data);
   tsvFile.data = 'John\t30\tNew York';
-  print(tsvFile.data);
+  // print(tsvFile.data);
 
-  print(jsonFile.fields());
-  print(xmlFile.fields());
-  print(csvFile.fields());
-  print(tsvFile.fields());
+  // print(jsonFile.fields());
+  // print(xmlFile.fields());
+  // print(csvFile.fields());
+  // print(tsvFile.fields());
 
   // print('José Fhilipe Martins Coelho\nJoão Luiz Mineiro Alves\nFernando Soares de Araujo Filho');
 }

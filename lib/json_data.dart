@@ -11,8 +11,10 @@ class JsonData extends Data {
   }
 
   @override
-  set data (String input) {
-    super.bufferFile += ",\n$input";
+  set data(String input) {
+    List jsonFile = json.decode(super.bufferFile);
+    jsonFile.add(json.decode(input));
+    super.bufferFile = json.encode(jsonFile);
   }
 
   @override
