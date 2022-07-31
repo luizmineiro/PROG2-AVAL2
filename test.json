@@ -1,7 +1,17 @@
-{
-  "name": "fhilipe",
-  "age": 21,
-  "city": "são paulo",
-  "state": "SP",
-  "att2": ""
-}
+[
+  {
+    "name": "Fhilipe",
+    "age": 21,
+    "city": "Parnaíba"
+  },
+  {
+    "name": "Fernando",
+    "age": 21,
+    "city": "Luís Correia"
+  },
+  {
+    "name": "João Luíz",
+    "age": 21,
+    "city": "Parnaíba"
+  }
+]

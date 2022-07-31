@@ -1,12 +1,18 @@
 import 'package:main/data.dart';
 import 'package:xml/xml.dart';
+import 'dart:io';
 
 class XmlData extends Data {
   @override
-  set data (String file) { 
-    var xmlFile = XmlDocument.parse(file);
-    var xmlString = xmlFile.toString();
-    super.file.writeAsStringSync(xmlString);
+  void load(String fileName) {
+    if(!fileName.contains('.xml')) throw FormatException("Formato inválido");
+    super.file = File(fileName);
+    super.bufferFile = file.readAsStringSync();
+  }
+
+  @override
+  set data (String input) { 
+    super.bufferFile += input;
   }
 
   @override
@@ -14,10 +20,12 @@ class XmlData extends Data {
     XmlDocument xmlFile = XmlDocument.parse(super.file.readAsStringSync());
     List<String> xmlMap = [];
 
-    for (var element in xmlFile.rootElement.childElements) {
+    var xmlRootList = xmlFile.rootElement.descendantElements.toList();
+
+    for (var element in xmlRootList[0].childElements.toList()) {
       xmlMap.add(element.name.toString());
     }
-    
+
     return xmlMap;
   }
 }

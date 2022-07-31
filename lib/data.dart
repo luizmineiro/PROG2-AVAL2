@@ -2,19 +2,17 @@ import 'dart:io';
 
 abstract class Data {
   late File file;
+  late String bufferFile;
 
-  void load(String fileName) {
-    if(!fileName.contains('.json')) throw FormatException("Formato inválido");
-    file = File(fileName);
-  }
+  void load(String fileName);
 
-  void save(String fileName) => file.writeAsStringSync(fileName);
+  void save() => file.writeAsStringSync(bufferFile);
 
   void clear() => file = File(Platform.isWindows ? 'nul' : '/dev/null');
 
   bool hasData() => file.lengthSync() > 0;
 
-  String get data => file.readAsStringSync();
+  String get data => bufferFile;
 
   set data(String file);
 

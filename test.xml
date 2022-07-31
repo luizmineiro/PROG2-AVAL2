@@ -1,7 +1,17 @@
-<person>
-	<name>John</name>
-	<age>25</age>
-	<city>New York</city>
-	<state>NY</state>
-	<att4></att4>
-</person>
+<persons>
+  <person>
+    <name>Fhilipe</name>
+    <age>21</age>
+    <city>Parnaíba</city>
+  </person>
+  <person>
+    <name>Fernando</name>
+    <age>21</age>
+    <city>Luís Correia</city>
+  </person>
+  <person>
+    <name>João Luiz</name>
+    <age>21</age>
+    <city>Parnaíba</city>
+  </person>
+</persons>

@@ -1,20 +1,26 @@
-import 'dart:convert';
 import 'package:main/data.dart';
+import 'dart:convert';
+import 'dart:io';
 
 class JsonData extends Data {
   @override
-  set data (String file) {
-    var jsonFile = json.decode(file);
-    var jsonString = json.encode(jsonFile);
-    super.file.writeAsStringSync(jsonString);
+  void load(String fileName) {
+    if(!fileName.contains('.json')) throw FormatException("Formato inválido");
+    super.file = File(fileName);
+    super.bufferFile = file.readAsStringSync();
+  }
+
+  @override
+  set data (String input) {
+    super.bufferFile += ",\n$input";
   }
 
   @override
   List<String> fields() {
-    Map jsonFile = json.decode(super.file.readAsStringSync());
+    List jsonFile = json.decode(super.file.readAsStringSync());
     List<String> jsonMap = [];
 
-    for (var key in jsonFile.keys) {
+    for (var key in jsonFile[0].keys) {
       jsonMap.add(key);
     }
     
