@@ -3,6 +3,9 @@
 ## Implementation for the programming test.
 This code implements classes that manipulate JSON, XML, CSV and TSV files following the object-oriented paradigms.
 
+### Third party libraries
+[XML](https://pub.dev/packages/xml)
+
 #### Authors
 José Fhilipe Martins Coelho <br>
 João Luiz Mineiro Alves <br>

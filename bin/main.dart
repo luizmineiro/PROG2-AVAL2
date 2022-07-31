@@ -36,6 +36,7 @@ void main(List<String> arguments) {
   jsonFile.data = '{\n  "name": "John",\n  "age": 30,\n  "city": "New York"\n}';
   // print(jsonFile.data);
   xmlFile.data = '<person>\n  <name>John</name>\n  <age>30</age>\n  <city>New York</city>\n</person>';
+  xmlFile.save();
   // print(xmlFile.data);
   csvFile.data = 'John,30,New York';
   // print(csvFile.data);
